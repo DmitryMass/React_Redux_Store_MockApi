@@ -1,0 +1,17 @@
+.cart__box {
+  display: flex;
+  gap: 30px;
+}
+.cart__img {
+  width: 100px;
+}
+.cart__img > img {
+  max-width: 100%;
+}
+
+.cart__order {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 250px;
+}

@@ -1,0 +1,41 @@
+.header {
+  padding: 20px 0;
+}
+
+.header__cartBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.header__cart_counter {
+  position: absolute;
+  top: -13px;
+  right: -16px;
+  background: #75e359;
+  width: 15px;
+  border-radius: 50%;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+}
+.header__cart,
+.header__logo {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.header__cart > object,
+.header__logo > object {
+  position: relative;
+  z-index: -1;
+  width: 25px;
+  height: 25px;
+}
+
+.active {
+  color: red;
+}
