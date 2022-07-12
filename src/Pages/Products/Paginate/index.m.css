@@ -1,3 +1,32 @@
+.paginate__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-left: 40px;
+}
+.paginate__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paginate__btn,
+.paginate__link {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--md);
+  line-height: var(--lh-md);
+  background: blue;
+  color: var(--white);
+  margin: 0 5px;
+  border: none;
+  border-radius: 12px;
+}
+
 .paginate__link {
   display: inline-block;
   cursor: pointer;

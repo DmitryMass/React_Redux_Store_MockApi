@@ -28,6 +28,7 @@ const Products = () => {
           pagination={pagination}
           productList={productList}
           productPerPage={productPerPage}
+          setCurrentPage={setCurrentPage}
         />
       </div>
     </main>

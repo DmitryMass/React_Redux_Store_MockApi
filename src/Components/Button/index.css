@@ -1,6 +1,6 @@
 .btn__primary {
   display: block;
-  background: blue;
+  background: var(--green);
   color: var(--white);
   border: none;
   border-radius: 12px 0px 12px 0;
@@ -9,7 +9,7 @@
 }
 .btn__secondary {
   display: block;
-  background: gray;
+  background: var(--btn-bgc);
   color: var(--white);
   border: none;
   border-radius: 12px 0px 12px 0;
