@@ -2,19 +2,16 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { removeFromCart } from '../../../Store/Actions/component';
 
-import girl from '../../../Assets/Img/girl.jpg';
-
 import styles from './index.m.css';
 
 const CartItem = ({ product }) => {
   const dispatch = useDispatch();
-
-  const { title, price, description, quantity } = product;
+  const { title, price, description, quantity, img } = product;
 
   return (
     <div className={styles.cart__box}>
       <div className={styles.cart__img}>
-        <img src={girl} alt="man" />
+        <img src={img} alt="" />
       </div>
       <div className={styles.cart__order}>
         <div>

@@ -21,7 +21,7 @@ const Products = () => {
     <main className={styles.main}>
       <div className="container">
         <div className="grid__products">
-          <ProductFilter />
+          <ProductFilter setCurrentPage={setCurrentPage} />
           <AllProducts currentProduct={currentProduct} />
         </div>
         <Paginate

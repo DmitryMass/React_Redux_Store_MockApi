@@ -1,6 +1,19 @@
-.nav__filter {
+.categories__nav {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: start;
+}
+.categories__item {
+  background: var(--categories-bgc);
+  border-radius: 50px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  margin: 10px 0;
+  transition: all 0.3s ease;
+}
+.categories__item:hover {
+  border-color: silver;
+  transform: scale(1.1);
 }

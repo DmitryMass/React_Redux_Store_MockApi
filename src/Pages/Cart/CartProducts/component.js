@@ -7,9 +7,7 @@ import CartItem from '../CartItem/component';
 
 import styles from './index.m.css';
 
-const CartProducts = () => {
-  const cartProducts = useSelector((state) => state.cart);
-
+const CartProducts = ({ cartProducts }) => {
   return (
     <div className={styles.cart__list}>
       {cartProducts.map((product) => {

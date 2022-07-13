@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 
 const useProductHook = (currentPage, setCurrentPage, productPerPage) => {
-  const productList = useSelector((state) => state.products);
+  const productList = useSelector((state) => state.currentProductItems);
 
   const lastProductIndex = currentPage * productPerPage;
   const firstProductIndex = lastProductIndex - productPerPage;

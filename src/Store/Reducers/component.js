@@ -2,6 +2,8 @@ import {
   ACTION_CART_ADD,
   ACTION_CART_REMOVE,
   ACTION_CLEAR_EDIT,
+  ACTION_FILTER_CATEGORY,
+  ACTION_FILTER_PRICE,
   ACTION_PRODUCTS_FETCH,
   ACTION_PRODUCT_CREATE,
   ACTION_PRODUCT_EDIT,
@@ -13,6 +15,29 @@ const initialState = {
   products: [],
   cart: [],
   editCurrentProduct: {},
+  categories: [
+    {
+      id: 1,
+      name: 'All product',
+    },
+    {
+      id: 2,
+      name: 'Dress',
+    },
+    {
+      id: 3,
+      name: 'T-shirt',
+    },
+    {
+      id: 4,
+      name: 'Hoodie',
+    },
+    {
+      id: 5,
+      name: 'Glasses',
+    },
+  ],
+  currentProductItems: [],
 };
 
 function rootReducer(state = initialState, { type, payload }) {
@@ -21,6 +46,7 @@ function rootReducer(state = initialState, { type, payload }) {
       return {
         ...state,
         products: payload,
+        currentProductItems: state.products,
       };
     case ACTION_PRODUCT_CREATE:
       return {
@@ -49,6 +75,7 @@ function rootReducer(state = initialState, { type, payload }) {
         ...state,
         editCurrentProduct: (payload = {}),
       };
+    // Cart
     case ACTION_CART_ADD:
       return {
         ...state,
@@ -65,6 +92,17 @@ function rootReducer(state = initialState, { type, payload }) {
         ...state,
         cart: state.cart.filter((product) => product.id !== payload),
       };
+    // Filtered Categories
+    case ACTION_FILTER_CATEGORY:
+      return {
+        ...state,
+        currentProductItems:
+          payload === 'All product'
+            ? state.products
+            : state.products.filter((product) => product.category === payload),
+      };
+    case ACTION_FILTER_PRICE:
+      return {};
     default:
       return state;
   }

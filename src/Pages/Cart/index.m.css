@@ -1,0 +1,27 @@
+.cart {
+  padding: 100px 0;
+}
+.order__price {
+  width: 250px;
+  border-bottom: 1px solid black;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+}
+.order__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.order__total > span {
+  font-size: var(--md);
+  line-height: var(--lh-md);
+  font-weight: 500;
+}
+.order__checkout {
+  border: none;
+  background: blue;
+  color: var(--white);
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+}

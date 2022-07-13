@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { editProduct } from '../../../Store/Actions/component';
+import { editProduct, removeProduct } from '../../../Store/Actions/component';
 
 import styles from './index.m.css';
 
@@ -28,7 +28,12 @@ const List = () => {
               >
                 Edit
               </button>
-              <button className={styles.product__delete}>Delete</button>
+              <button
+                onClick={() => dispatch(removeProduct(product.id))}
+                className={styles.product__delete}
+              >
+                Delete
+              </button>
             </div>
           </div>
         );

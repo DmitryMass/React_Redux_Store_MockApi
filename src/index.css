@@ -17,6 +17,7 @@
   --white: #ffffff;
   --btn-bgc: #181a54;
   --green: #75e359;
+  --categories-bgc: #f2f2f2;
 
   /* Containers */
   --x-large: 1230px;
@@ -69,6 +70,12 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  flex-wrap: wrap;
+}
+.flex__cart {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   flex-wrap: wrap;
 }
 .flex__admin {

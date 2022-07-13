@@ -15,6 +15,9 @@ export const ACTION_CLEAR_EDIT = 'ACTION_CLEAR_EDIT';
 // Cart action
 export const ACTION_CART_ADD = 'ACTION_CART_ADD';
 export const ACTION_CART_REMOVE = 'ACTION_CART_REMOVE';
+// Filter Categories Products
+export const ACTION_FILTER_CATEGORY = 'ACTION_FILTER';
+export const ACTION_FILTER_PRICE = 'ACTION_FILTER_PRICE';
 
 export function fetchProducts() {
   return async (dispatch) => {
@@ -59,4 +62,14 @@ export function addToCart(product) {
 
 export function removeFromCart(id) {
   return { type: ACTION_CART_REMOVE, payload: id };
+}
+
+// FILTERED CURRENTPRODUCTS + CATEGORIES
+
+export function filterCategories(filteredProduct) {
+  return { type: ACTION_FILTER_CATEGORY, payload: filteredProduct };
+}
+
+export function filterPriceMin(price) {
+  return { type: ACTION_FILTER_PRICE, payload: price };
 }
