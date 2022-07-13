@@ -1,10 +1,16 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import AdminForm from './Form/component';
+import List from './List/component';
 
 const Admin = () => {
+  const editElement = useSelector((state) => state.editCurrentProduct);
+
   return (
     <main className="main">
       <div className="container">
-        <h1>Change Products inputs and other..</h1>
+        <AdminForm editElement={editElement} key={editElement.id} />
+        <List />
       </div>
     </main>
   );

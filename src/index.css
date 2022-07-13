@@ -71,6 +71,13 @@
   align-items: baseline;
   flex-wrap: wrap;
 }
+.flex__admin {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
 
 .grid__products {
   display: grid;

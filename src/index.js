@@ -9,7 +9,9 @@ import './styles/reset.css';
 import './index.css';
 
 ReactDOM.createRoot(document.querySelector('#root')).render(
-  <Provider store={store}>
-    <App />
-  </Provider>
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>
 );
